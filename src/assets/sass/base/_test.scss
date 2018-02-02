@@ -1,0 +1,81 @@
+// media queries
+
+html {
+	@include media (b1) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "1";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+
+	@include media (b2) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "2";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+
+	@include media (b3) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "3";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+
+	@include media (b4) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "4";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+
+	@include media (b5) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "5";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+
+	@include media (b6) {
+		outline: 2px solid red;
+		&:before {
+			position: absolute;
+			content: "6";
+			font-size: 60px;
+			font-weight: bold;
+			width: 10px;
+			height: 10px;
+			z-index: 100;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="133px" height="110px" viewBox="0 0 133 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Syncro</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="13" y="1" width="10" height="11" rx="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="10" height="11" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="3" y="14" width="11" height="5" rx="1"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11" height="5" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="21" y="31" width="11" height="4" rx="1"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11" height="4" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="0" y="2" width="35" height="36" rx="2"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="39" height="40">
+            <rect x="-2" y="0" width="39" height="40" fill="white"></rect>
+            <use xlink:href="#path-7" fill="black"></use>
+        </mask>
+        <rect id="path-9" x="3" y="21" width="4" height="1" rx="0.5"></rect>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="4" height="1" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-11" x="8" y="21" width="2" height="1" rx="0.5"></rect>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="2" height="1" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+    </defs>
+    <g id="Landing-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SS-1200-Nuevo-Layout" transform="translate(-315.000000, -1229.000000)">
+            <g id="Syncro" transform="translate(315.000000, 1229.000000)">
+                <g id="Group-9">
+                    <g id="Page-1" stroke="#1D1C1B" stroke-width="2" stroke-linecap="round">
+                        <path d="M15.6738541,35.6019226 C14.7644216,37.979471 14.0203405,40.4357935 13.4559892,42.9601484" id="Stroke-1"></path>
+                        <path d="M22.2774838,23.3786742 C21.5549703,24.3812548 20.8648081,25.4089 20.2105919,26.458029" id="Stroke-3"></path>
+                        <path d="M28.8458865,15.8535903 C26.4303189,18.1523645 24.230427,20.6695581 22.2785622,23.3801065" id="Stroke-5"></path>
+                        <path d="M118.624481,42.9605065 C113.239778,18.9558613 91.7620757,0.998925806 66.0391568,0.998925806 C57.4732378,0.998925806 49.3818054,2.98976452 42.1962108,6.53102258" id="Stroke-7"></path>
+                        <polyline id="Stroke-9" stroke-linejoin="round" points="99.4990811 34.0812226 119.610838 45.7183194 131.296865 25.6846097"></polyline>
+                        <path d="M13.6716649,66.4588484 C19.0563676,90.4634935 40.5340703,108.420429 66.2569892,108.420429 C91.9799081,108.420429 113.457611,90.4634935 118.842314,66.4588484" id="Stroke-11"></path>
+                        <polyline id="Stroke-13" stroke-linejoin="round" points="32.7970649 75.3381323 12.6853081 63.7010355 0.999281081 83.7347452"></polyline>
+                    </g>
+                    <g id="Group" transform="translate(49.000000, 36.000000)">
+                        <rect id="Rectangle-214-Copy-2" fill="#FFFFFF" x="0" y="2" width="35" height="36" rx="2"></rect>
+                        <path d="M18,0.513513514 L18,37.5007473" id="Line-Copy-3" stroke="#76B2DB" stroke-linecap="square"></path>
+                        <path d="M0.5,4.5 L34.5147018,4.5" id="Line" stroke="#76B2DB" stroke-linecap="square"></path>
+                        <use id="Rectangle-216-Copy" stroke="#76B2DB" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <use id="Rectangle-217-Copy-3" stroke="#76B2DB" mask="url(#mask-4)" stroke-width="2" fill="#E7F2F9" xlink:href="#path-3"></use>
+                        <use id="Rectangle-217-Copy-2" stroke="#76B2DB" mask="url(#mask-6)" stroke-width="2" fill="#E7F2F9" xlink:href="#path-5"></use>
+                        <use id="Rectangle-214-Copy" stroke="#1C7FC3" mask="url(#mask-8)" stroke-width="4" xlink:href="#path-7"></use>
+                        <use id="Rectangle-217-Copy-7" stroke="#76B2DB" mask="url(#mask-10)" stroke-width="2" fill="#E7F2F9" xlink:href="#path-9"></use>
+                        <use id="Rectangle-217-Copy-8" stroke="#76B2DB" mask="url(#mask-12)" stroke-width="2" fill="#E7F2F9" xlink:href="#path-11"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

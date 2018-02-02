@@ -1,0 +1,9 @@
+// Font size mixin
+@mixin font-size($size) {
+	@if map-has-key($text-sizing, $size) {
+		font-size: map-deep-get($text-sizing, $size, 'font-size');
+		line-height: map-deep-get($text-sizing, $size, 'line-height');
+	} @else {
+		@warn "'#{$size}' no está definido como un tamaño de texto. Puedes revisar los tamaños definidos en _typography.scss dentro del mapa $text-sizing.";
+	}
+}

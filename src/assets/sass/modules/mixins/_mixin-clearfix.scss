@@ -1,0 +1,21 @@
+/*--------------------------------------------------------*\
+     CLEARFIX
+\*--------------------------------------------------------*/
+
+/**
+ * Para limpiar los floats.
+ */
+
+@mixin clearfix() {
+	clear: both;
+
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}

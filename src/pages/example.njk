@@ -1,0 +1,44 @@
+{# index.nunjucks #}
+{% extends "default.njk" %}
+
+{% block content %}
+
+		{% include "partials/super-title.njk" %}
+
+		<div class="content">
+			<div class="content__inner">
+				<div class="content__row">
+					<div class="content__c-12">
+						<h2 class="title h--light h--cbl h--tc">{{claim}}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% include "partials/hero.njk" %}
+
+
+		<div class="content">
+			<div class="content__inner">
+				<div class="content__row">
+					<div class="content__c-6">
+					<h3 class="title h--up">{{text_1}}</h3>
+					<p>{{text_1_2}}</p>
+						<div class="image-wrap h--tc">
+							<img src="{{url.base}}{{url.landing_name}}{{img.icon_sync}}" alt="">
+						</div>
+					</div>
+					<div class="content__c-6">
+					<h3 class="title h--up">{{text_2}}</h3>
+					<p>{{text_2_1}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% include "partials/testimonial.njk" %}
+		{% include "partials/services-table.njk" %}
+
+
+
+{% endblock %}

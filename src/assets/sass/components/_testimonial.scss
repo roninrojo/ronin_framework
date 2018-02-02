@@ -1,0 +1,39 @@
+
+
+
+
+
+/*--------------------------------------------------------*\
+     TESTIMONIALES
+\*--------------------------------------------------------*/
+
+/**
+ * Foto + nombre + cita
+ */
+
+ .testimonial {
+	margin-top: $xxlarge-space * 2;
+	margin-bottom: $xxlarge-space * 2;
+
+	[class$="row"] {
+		display: flex;
+		align-items: center;
+	}
+
+ 	.title {
+ 		font-style: italic;
+ 	}
+
+	blockquote {
+		padding: 0;
+		margin: 0;
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	&__cta {
+		.boton {
+			margin-top: $medium-space;
+		}
+	}
+ }

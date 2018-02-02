@@ -1,0 +1,50 @@
+/*--------------------------------------------------------*\
+     MEDIA QUERIES MIXIN
+\*--------------------------------------------------------*/
+
+/**
+ * MIxin para poder usar las mediaqueries de forma facil con un @include
+ */
+
+
+
+
+
+// MAPA DE LOS BREAKPOINTS
+//
+// Aqui definimos los breakpoints que se usan.
+// - Los que solo son numeros son breakpoints ABIERTOS
+// - Los que son b* son breakpoints CERRADOS
+//
+
+$media-breakpoints: (
+	6: '(min-width: #{$rwd-size6-min})',
+	5: '(max-width: #{$rwd-size5-max})',
+	4: '(max-width: #{$rwd-size4-max})',
+	3: '(max-width: #{$rwd-size3-max})',
+	2: '(max-width: #{$rwd-size2-max})',
+	1: '(max-width: #{$rwd-size1-max})',
+	'b6': '(min-width: #{$rwd-size6-min})',
+	'b5': '(min-width: #{$rwd-size5-min}) and (max-width: #{$rwd-size5-max})',
+	'b4': '(min-width: #{$rwd-size4-min}) and (max-width: #{$rwd-size4-max})',
+	'b3': '(min-width: #{$rwd-size3-min}) and (max-width: #{$rwd-size3-max})',
+	'b2': '(min-width: #{$rwd-size2-min}) and (max-width: #{$rwd-size2-max})',
+	'b1': '(max-width: #{$rwd-size1-max})'
+) !default;
+
+
+
+
+
+// EL MIXIN PARA LAS MEDIAQUERIES
+@mixin media($breakpoints...) {
+	@each $breakpoint in $breakpoints {
+		@if map-has-key($media-breakpoints, $breakpoint) {
+			@media #{map-get($media-breakpoints, $breakpoint)} {
+				@content;
+			}
+		} @else {
+			@warn "'#{$breakpoint}' no está definido como un breakpoint. Puedes revisar los breakpoints definidos en _media-mixins.scss";
+		}
+	}
+}

@@ -1,0 +1,108 @@
+/*--------------------------------------------------------*\
+     BOTON
+\*--------------------------------------------------------*/
+
+/**
+ * Estilos para los botones del MP
+ */
+
+.boton {
+	@include boton();
+
+	// COLORS
+
+	&--green {
+		@include boton($mediumgreen);
+	}
+
+	&--orange {
+		@include boton($mediumorange);
+	}
+
+	&--red {
+		@include boton($red);
+	}
+
+	&--redwine {
+		@include boton($redwine);
+	}
+
+	&--gray {
+		@include boton($lightgray, $font-color);
+
+		background: $lightgray;
+		border-color: $mediumgray;
+		color: $font-color;
+
+		&:hover {
+			background: lighten($lightgray, 5%);
+			border-color: $mediumgray;
+			color: $font-color;
+		}
+
+		&:active { box-shadow: inset 0 1px 5px rgba(0, 0, 0, .25); }
+	}
+
+	&--transparent {
+		background: none;
+		border: 1px solid transparent;
+		color: $mediumgray;
+
+		&:hover {
+			background: lighten($lightgray, 2%);
+			border: 1px solid transparent;
+			color: $mediumgray;
+			text-decoration: underline;
+		}
+
+		&:active { box-shadow: inset 0 1px 5px rgba(0, 0, 0, .25); }
+	}
+
+	// SIZES
+	&--slim {
+		padding: .375em .625em;
+	}
+
+	&--small {
+		font-size: .875em;
+		padding: .75em .875em;
+	}
+
+	&--xsmall {
+		font-size: .875em;
+		padding: .625em .75em;
+	}
+
+	&--xxsmall {
+		font-size: .875em;
+		padding: .375em .5em;
+	}
+
+	// MODIFIERS
+	&--fw { width: 100%; }
+
+	&--active { box-shadow: inset 0 1px 5px rgba(0, 0, 0, .25); }
+
+	&--uppercase { text-transform: uppercase; }
+
+	// Para añadir margin bottom
+	// (es un helper para los antiguos .upload-btn que tenian este mb, si se revisa el MP en genearal se devería poder borrar)
+	&--mb { margin-bottom: 20px; }
+
+
+	// CASES
+	&--submit { @include boton($mediumgreen); }
+
+	&--price-table {
+		font-size: 1.3em;
+		font-weight: bold;
+		padding: 0.575em 1em;
+	}
+
+	&--price-table {
+		font-size: 1.3em;
+		font-weight: bold;
+		padding: 0.575em 1em;
+	}
+}
+

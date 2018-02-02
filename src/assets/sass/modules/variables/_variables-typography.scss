@@ -1,0 +1,51 @@
+/*--------------------------------------------------------*\
+     TYPOGRAPHY
+\*--------------------------------------------------------*/
+
+/**
+ * Variables para /base/_typography.scss
+ */
+
+
+
+
+$ff-deafult: 'Open Sans', Arial, Helvetica, sans-serif, 宋体, SimSun, 华文细黑, STXihei;
+$fs-default: 16;
+
+$text-sizing: (
+	'xxsmall': (
+		'size': xxsmall,
+		'font-size': (11 / $fs-default) + em,
+		'line-height': 1.454545
+	),
+	'xsmall': (
+		'size': xsmall,
+		'font-size': (12 / $fs-default) + em,
+		'line-height': 1.416667
+	),
+	'small': (
+		'size': small,
+		'font-size': (14 / $fs-default) + em,
+		'line-height': 1.571429
+	),
+	'medium': (
+		'size': medium,
+		'font-size': (16 / $fs-default) + em,
+		'line-height': 1.5
+	),
+	'large': (
+		'size': large,
+		'font-size': (18 / $fs-default) + em,
+		'line-height': 1.444444
+	),
+	'xlarge': (
+		'size': xlarge,
+		'font-size': (24 / $fs-default) + em,
+		'line-height': 1.333333
+	),
+	'xxlarge': (
+		'size': xxlarge,
+		'font-size': (26 / $fs-default) + em,
+		'line-height': 1.307692
+	)
+);

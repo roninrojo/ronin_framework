@@ -1,0 +1,186 @@
+
+
+
+
+
+/*--------------------------------------------------------*\
+     SERVICES TABLE
+\*--------------------------------------------------------*/
+
+/**
+ * Tabla comparativa de servicios
+ */
+
+
+
+
+.premium-table {
+
+	thead {
+		@include font-size(large);
+		font-weight: 300;
+		text-transform: uppercase;
+
+		td {
+			border-bottom: 1px solid $mediumgray;
+			border-right: 1px solid $mediumgray;
+
+			&:first-child {
+			border-bottom: 0;
+			border-right: 0;
+			}
+
+			&:last-child {
+				border-left: 1px solid $mediumgray;
+				border-right: 0;
+			}
+		}
+	}
+
+	td {
+		padding: $medium-space 0;
+		border-right: 1px solid $mediumgray;
+
+		&:first-child {
+		border-bottom: 0;
+		border-right: 0;
+		}
+
+		&:last-child {
+			border-left: 1px solid $mediumgray;
+			border-right: 0;
+		}
+
+		+ td {
+			text-align: center;
+			@include font-size(small);
+
+			[class$="-clear"] {
+				@include font-size(xxlarge);
+				vertical-align: middle;
+				font-weight: 700;
+				color: $red;
+			}
+
+			[class$="-check"] {
+				@include font-size(xxlarge);
+				vertical-align: middle;
+				font-weight: 700;
+				color: $green;
+			}
+		}
+	}
+
+	.premium-table__service {
+		text-align: right;
+		padding-right: $xlarge-space;
+	}
+
+	@include media (3) {
+
+		.premium-table__service {
+			text-align: center;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		thead,
+		tbody,
+		th,
+		td,
+		tr {
+			display: block;
+		}
+
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		tr {
+			margin-bottom: $xxlarge-space;
+
+			td:first-child {
+				border-bottom: 1px solid $mediumgray;
+			}
+		}
+
+		td {
+			border: none;
+			position: relative;
+			padding-left: 50%;
+
+			+ td {
+				@include font-size(large);
+
+				[class$="-clear"] {
+				@include font-size(large);
+				vertical-align: middle;
+				font-weight: 700;
+				color: $red;
+				}
+
+				[class$="-check"] {
+					@include font-size(large);
+					vertical-align: middle;
+					font-weight: 700;
+					color: $green;
+				}
+			}
+
+			&:last-child {
+				border-left: 0;
+			}
+
+			&:before {
+			position: absolute;
+			top: $medium-space;
+			left: $medium-space;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+			text-align: left;
+			@include font-size(small);
+			}
+
+			&:nth-of-type(1):before {
+				content: "";
+			}
+
+			&:nth-of-type(2):before {
+				content: "nuevas empresas y emprendedores";
+				text-transform: uppercase;
+			}
+
+			&:nth-of-type(3):before {
+				content: "pymes y grandes empresas";
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
+			&:nth-of-type(4):before {
+				content: "empresas con un amplio catálogo";
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.table-wrap {
+	transition: all 0.5s ease-out;
+	height: 500px;
+	margin-bottom: 50px;
+	overflow: hidden;
+
+	&--hide {
+		height: 500px;
+	}
+
+	&--show {
+		height: 900px;
+	}
+}
+
+
+

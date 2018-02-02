@@ -1,0 +1,17 @@
+<!-- blank.nunjuks -->
+<!DOCTYPE html>
+<html lang="en">
+	{% include "includes/head.njk" %}
+<body>
+
+	<!-- You write code for this content block in another file -->
+<div class="content">
+	<div class="content__inner">
+		{% block content %} {% endblock %}
+	</div>
+</div>
+
+	{% include "includes/scripts.njk" %}
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+/*--------------------------------------------------------*\
+     MIXIN ICONFONT
+\*--------------------------------------------------------*/
+
+/**
+ * Para poder usar iconfont en los scss con cualquier elemento.
+ */
+
+@mixin iconfont($icon, $position: before) {
+	&:#{$position} {
+		content: "#{$icon}";
+
+		font-family: $iconfont-name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		@content;
+	}
+}

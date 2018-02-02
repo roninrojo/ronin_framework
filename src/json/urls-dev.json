@@ -1,0 +1,10 @@
+{
+	"entorno" : "dev",
+
+	"url" :
+		{
+			"base" : "./",
+			"landing_name" : "",
+			"js" : "http://promo-test.ssstatic.com/landing/src/js/form-landing.js"
+		}
+}

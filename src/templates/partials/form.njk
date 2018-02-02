@@ -1,0 +1,62 @@
+{# form.nunjucks #}
+
+<div class="formulario">{# Necesario para que se envie el form por js #}
+<form action="" method="POST" role="form" name="form1" id="form1A">
+
+<div class="form-title h--tc">{{form_title}}</div>
+
+	{# Input text #}
+	<label class="form-field form-field--text" for="text">
+		<input id="text" class="form-field__value" type="text">
+		<span class="form-field__label">Nombre:</span>
+	</label>
+	<label class="form-field form-field--text" for="text">
+		<input id="text" class="form-field__value" type="text">
+		<span class="form-field__label">Empresa:</span>
+	</label>
+	<label class="form-field form-field--text" for="text">
+		<input id="text" class="form-field__value" type="text">
+		<span class="form-field__label">E-mail:</span>
+	</label>
+	<span class="form-info form-info--mini form-info--bg">No usaremos tu email para enviar publicidad de terceros</span>
+
+	{# Input radio #}
+	{#
+	<label class="form-field form-field--radio" for="radio1">
+		<input id="radio1" name="radio" class="form-field__value" type="radio">
+		<span class="form-field__label">Lorem</span>
+	</label>
+	<label class="form-field form-field--radio" for="radio2">
+		<input id="radio2" name="radio" class="form-field__value" type="radio">
+		<span class="form-field__label">Lorem</span>
+	</label>
+	#}
+
+	{# Select #}
+	{#
+	<label class="form-field form-field--select" for="">
+		<span class="form-field__label">Lorem:</span>
+		<select class="form-field__value" name="" id="">
+			<option value="">option 1</option>
+			<option value="">option 2</option>
+			<option value="">option 3</option>
+			<option value="">option 4</option>
+			<option value="">option 5</option>
+		</select>
+	</label> #}
+
+	{# Textarea #}
+	{# <label class="form-field form-field--textarea" for="">
+		<span class="form-field__label">Lorem:</span>
+		<textarea class="form-field__value" name="" id="" cols="30" rows="10"></textarea>
+	</label> #}
+
+	<label class="form-field form-field--checkbox" for="check">
+		<input id="check" class="form-field__value" type="checkbox">
+		<span class="form-field__label">Llamadme ahora</span>
+	</label>
+
+	{# submit #}
+	<input type="submit" class="send-form-js boton boton--blue boton--uppercase boton--fw" value="{{form_button}}" data-type="1A">
+</form>
+</div>

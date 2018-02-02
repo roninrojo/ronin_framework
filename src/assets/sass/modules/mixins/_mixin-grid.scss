@@ -1,0 +1,90 @@
+/*--------------------------------------------------------*\
+     GRID
+\*--------------------------------------------------------*/
+
+/**
+ * GRID
+ */
+
+@mixin grid ( $gutter: 10px, $grid-columns: 12 ) {
+
+	$gutter: $gutter;
+
+	@include clearfix();
+	background: #fff;
+	font-size: 16px;
+	margin: $xlarge-space auto;
+	position: relative;
+
+	&--strech {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 1200 + ($gutter * 2);
+		padding-right: $gutter;
+		padding-left: $gutter;
+		width: 100%;
+
+		&--full {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	&__row {
+		@include clearfix();
+		// margin-left: -#{$gutter};
+		// margin-right: -#{$gutter};
+	}
+
+	&__column {
+		padding-right: $gutter;
+		padding-left: $gutter;
+		margin: 0;
+		float: left;
+
+		// @include media(3) {
+		// 	float: none;
+		// }
+	}
+
+
+	// Columnas
+	$i: 1;
+
+	@for $i from 1 through $grid-columns {
+		&__c-#{$i}{
+			float: left;
+			padding-right: $gutter;
+			padding-left: $gutter;
+			width: (100/$grid-columns) * $i * 1%;
+
+			&:blank {
+				content:"&nbsp;";
+			}
+
+			&:first-child {
+				padding-left:0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			@include media(2) {
+				width: 100%;
+
+				&:first-child {
+					padding-right:0;
+				}
+
+				&:last-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

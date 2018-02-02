@@ -1,0 +1,540 @@
+/*--------------------------------------------------------*\
+	 FORMS
+\*--------------------------------------------------------*/
+
+/**
+ * Estilos para los formularios.
+ */
+
+ /*doc
+---
+title: Forms
+name: forms
+category: Base
+---
+
+
+Select con estilo personalizado:
+
+* Estilo por defecto
+	+ Agrega border e icono de flecha alineado a la derecha
+
+```html_example
+<div class="custom-select">
+	<select class="select select--fw">
+		<option selected>Custom select</option>
+	</select>
+</div>
+```
+*/
+
+.formulario-B,
+.formulario {
+/* Aquí van estilos para el formulario y para la respuesta */
+
+}
+
+.form-title {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.form-info {
+	display: inline-block;
+
+	&--bg {
+		background-color: rgba(255,255,255,0.8);
+		border-radius: 3px;
+		padding: $xsmall-space;
+	}
+	&--mini {
+		@include font-size(xsmall);
+		line-height: 1.6;
+	}
+}
+
+// Label que engloba todos los elementos para poder dar estilos propios a todos los elementos de los formularios.
+.form-field {
+	border-radius: $form-border-radius;
+	background: #fff;
+	border: 1px solid $mediumgray;
+	display: block;
+	margin: $medium-space 0;
+	padding: $xxlarge-space $medium-space $small-space;
+	position: relative;
+
+	// Label, es un span que se usa como fake label
+	&__label {
+		color: $font-color;
+		left: $medium-space;
+		margin: 0;
+		position: absolute;
+		top: $small-space;
+		font-weight: normal;
+		@include font-size(small);
+
+		&--error {
+			display: none;
+			color: $red;
+			text-transform: none;
+		}
+	}
+
+	// Valor del campo, puede ser text, select, textarea, checkbox, radio, etc.
+	&__value {
+		background: transparent;
+		border: 0;
+		color: $font-color;
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		font-weight: normal;
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		// MODIFIERS -----
+
+		// Con contenido o foco
+		// Si tiene algun tipo de contenido le añadimos esta clase por JS
+		&:focus,
+		&--completed {
+			box-shadow: none;
+			outline: 0;
+
+			~ .form-field__label {
+				// @include font-size(xxsmall);
+				transition: .2s ease;
+				color: $mediumgray;
+			}
+		}
+
+		&.error {
+			&:focus ~ .form-field__label--error,
+			&:valid ~ .form-field__label--error {
+				display: none;
+			}
+
+			& ~ .form-field__label--error {
+				display: block;
+				right: $medium-space;
+				margin: 0;
+				position: absolute;
+				top: $small-space;
+				text-align: right;
+
+				@include media (2) {
+					left: $medium-space;
+					top: $xxlarge-space * 1.1;
+					right: inherit;
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	// MODIFIERS -----
+
+	// Si es un input text
+	&--text {
+		text-transform: uppercase;
+
+		.form-field__value {
+			text-overflow: ellipsis;
+		}
+	}
+
+	// Si es un select
+	&--select {
+		padding-bottom: 1.875rem; // para guardar el espacio que ocuparia el select (22px)
+		@include iconfont("\e10f") { // icono para la flecha del select
+			color: $mediumgray;
+			font-size: 1.5em;
+			line-height: 1;
+			margin-right: $xsmall-space;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -0.125em;
+		}
+
+		.form-field__value {
+			left: 0;
+			padding: $xxlarge-space $xxlarge-space $small-space $medium-space;
+			position: absolute;
+			text-overflow: ellipsis;
+			top: 0;
+		}
+	}
+
+	// Si es un select simple
+	&--simple-select {
+		padding: $small-space $medium-space 1.875rem $medium-space;
+		// padding-bottom: 1.875rem;
+
+		@include iconfont("\e10f") { // icono para la flecha del select
+			color: $mediumgray;
+			font-size: 1.5em;
+			line-height: 1;
+			margin-right: $xsmall-space;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -.5em;
+		}
+
+		.form-field__value {
+			left: 0;
+			padding: $small-space $medium-space;
+			position: absolute;
+			text-overflow: ellipsis;
+			top: 0;
+		}
+	}
+
+	// Si es un textarea
+	&--textarea {
+		.form-field__value {
+			resize: none;
+		}
+	}
+
+	// Si es un checkbox o radio
+	&--checkbox,
+	&--radio {
+		padding: $small-space $medium-space;
+		cursor: pointer;
+
+		.form-field__label {
+			position: static;
+			display: block;
+			padding-left: $xlarge-space;
+		}
+
+		// Eliminamos el efecto del texto
+		.form-field__value {
+			left: $medium-space;
+
+			&:focus,
+			&--completed {
+				~ .form-field__label {
+					@include font-size(medium);
+					transition: none;
+					color: $font-color;
+				}
+			}
+		}
+	}
+
+	// Si es un checkbox o radio simple
+	&--simple-checkbox,
+	&--simple-radio {
+		border: 0;
+		padding: 0;
+
+		&:first-child { margin-top: 0; }
+		&:last-child { margin-bottom: 0; }
+
+		.form-field__label {
+			position: static;
+			display: block;
+			padding-left: $xlarge-space;
+		}
+
+		// Eliminamos el efecto del texto
+		.form-field__value {
+			&:focus,
+			&--completed {
+				~ .form-field__label {
+					@include font-size(small);
+					transition: none;
+					color: $font-color;
+				}
+			}
+		}
+	}
+}
+
+
+// Textos de error
+.form-error {
+	@include font-size(xsmall);
+	color: $red;
+	display: block;
+	position: relative;
+	top: -$small-space;
+}
+
+
+// CUSTOM INPUT CHECKBOX Y RADIO para toda la app
+// Siempre tenemos que tener los checkbox y radio dentro de un <label> que puede ser:
+// .form-field--checkbox o .form-field--simple-checkbox
+// .form-field--radio o .form-field--simple-radio
+
+// Custom checkbox
+input[type="checkbox"],
+%input-type-checkbox {
+	position: absolute;
+	width: $medium-space;
+	height: $medium-space;
+	left: 1px;
+	top: 50%;
+	margin-top: -$xsmall-space;
+
+	// Exterior del checkbox
+	&:before {
+		content: '';
+		width: $medium-space;
+		height: $medium-space;
+		background: #fff;
+		border: 1px solid $mediumgray;
+		position: absolute;
+		top: -1px;
+		left: -1px;
+	}
+
+	// Marca checkbox seleccionado
+	&:after {
+		content: '';
+		width: $small-space;
+		height: $small-space;
+		background: $blue;
+		position: absolute;
+		top: 50%;
+		margin-top: -4px;
+		left: 50%;
+		margin-left: -4px;
+		display: none;
+	}
+
+	&:checked:after { display: block; }
+}
+
+// Custom radio
+input[type="radio"],
+%input-type-radio {
+	@extend %input-type-checkbox;
+
+	&:before,
+	&:after {
+		border-radius: 100%;
+	}
+
+	// Marca radio seleccionado
+	&:after {
+		width: 6px;
+		height: 6px;
+		margin-top: -3px;
+		margin-left: -3px;
+	}
+}
+
+// TEXTAREA
+
+textarea {
+	border-radius: $form-border-radius;
+	border: 1px solid $mediumgray;
+	color: $darkgray;
+	padding: $medium-space;
+	margin: $medium-space 0;
+}
+
+
+// INPUT TEXT
+input {
+	border-radius: $form-border-radius;
+	border: 1px solid $mediumgray;
+	padding: $small-space $medium-space;
+	text-overflow: ellipsis;
+}
+
+// SELECTS
+select {
+	border-radius: $form-border-radius;
+	background-color: #fff;
+	border: 1px solid $mediumgray;
+	color: $font-color;
+	margin: $medium-space 0;
+	padding: $small-space $medium-space;
+	position: relative;
+}
+
+.custom-select {
+	border-radius: $form-border-radius;
+	background: #fff;
+	border: 1px solid $mediumgray;
+	color: $font-color;
+	display: block;
+	margin: $medium-space 0;
+	position: relative;
+
+	@include iconfont("\e10f") {
+		color: $mediumgray;
+		font-size: 1.5em;
+		line-height: 1;
+		margin-right: $xsmall-space;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	    margin-top: -0.5em;
+	}
+
+	select,
+	.select {
+		background: transparent;
+		border: 0;
+		color: $font-color;
+		display: block;
+		margin: 0;
+		padding-right: $xxlarge-space;
+		text-overflow: ellipsis;
+		width: 100%;
+
+		appearance: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+	}
+}
+
+.select {
+	color: $font-color;
+
+	//MODIFIERS
+
+	// Si es full width
+	&--fw {
+		display: block;
+		width: 100%;
+	}
+}
+
+
+// LABELS
+%custom-label {
+	border-radius: $form-border-radius;
+	border: 1px solid $mediumgray;
+	padding: $xxlarge-space $medium-space $small-space;
+	margin: $medium-space 0;
+	display: block;
+	background: #fff;
+
+	// text
+	.label__text {
+		left: $medium-space;
+		position: absolute;
+		top: $small-space;
+		margin: 0;
+		color: $font-color;
+	}
+}
+
+%custom-label-content {
+	background: transparent;
+	border: 0;
+	color: $font-color;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	// MODIFIERS -----
+
+	// Con contenido o foco
+	// Si tiene algun tipo de contenido le añadimos esta clase por JS
+	&:focus,
+	&--completed {
+		box-shadow: none;
+		outline: 0;
+
+		~ .label__text {
+			@include font-size(xxsmall);
+			color: $mediumgray;
+			transition: .2s ease;
+		}
+	}
+}
+
+.label {
+
+	// Si contiene un submit button
+	&--button {
+		display: flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		align-items: stretch;
+		padding: 0;
+
+		// ELEMENTS
+
+		.label__input {
+			flex-grow: 2;
+			width: inherit;
+			padding: 0 0 0 $medium-space;
+		}
+
+		.label__button {
+			flex-grow: 1;
+			border: 0;
+			text-align: center;
+			@include font-size(xxlarge);
+
+			// ELEMENTS
+
+			[class*="icon-"] {
+				vertical-align: middle;
+			}
+
+			// MODIFIERS
+
+			&.label__button--green {
+				background: $green;
+				color: #fff;
+			}
+		}
+
+	}
+
+	// custom input file
+	&--custom-input-file {
+		display: inline-block;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+	}
+
+	.custom-input-file {
+		display: none;
+	}
+
+
+	// Color secundario
+	&--secondary { color: $mediumgray; }
+}
+
+
+.error {
+	color: $red;
+	display: block;
+	position: relative;
+	// top: -$small-space;
+	// @include font-size(xsmall);
+
+	&--fw {
+		width: 100%;
+	}
+
+	&--mw {
+		display: inline-block;
+		width: 49%;
+
+	}
+}
+

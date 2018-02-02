@@ -1,0 +1,241 @@
+/*--------------------------------------------------------*\
+     COLORS
+\*--------------------------------------------------------*/
+
+
+
+
+
+// PRIMARIOS
+
+$blue: #1c7fc3;
+$darkgray: #393939;
+$mediumgray: #ccc;
+$lightgray: #f5f5f5;
+
+
+// SECUNDARIOS
+
+$redwine: #a50606;
+$red: #d73c1e;
+$green: #690;
+$orange: #f80;
+$purple: #9C157B;
+$black: #222;
+$lightgrayblue: #f8f8fb;
+
+
+// TIPOGRAFIA
+
+$title-color: #333;
+$font-color: #555;
+
+
+@function lightblue($percent: 0) {
+	@return mix(#fff, $blue, $percent);
+}
+
+@function darkblue($percent: 0) {
+	@return mix(#000, $blue, $percent);
+}
+
+@function lightredwine($percent: 0) {
+	@return mix(#fff, $redwine, $percent);
+}
+
+@function darkredwine($percent: 0) {
+	@return mix(#000, $redwine, $percent);
+}
+
+@function lightred($percent: 0) {
+	@return mix(#fff, $red, $percent);
+}
+
+@function darkred($percent: 0) {
+	@return mix(#000, $red, $percent);
+}
+
+@function lightgreen($percent: 0) {
+	@return mix(#fff, $green, $percent);
+}
+
+@function darkgreen($percent: 0) {
+	@return mix(#000, $green, $percent);
+}
+
+@function lightorange($percent: 0) {
+	@return mix(#fff, $orange, $percent);
+}
+@function darkorange($percent: 0) {
+	@return mix(#000, $orange, $percent);
+}
+
+@function lightpurple($percent: 0) {
+	@return mix(#fff, $purple, $percent);
+}
+@function darkpurple($percent: 0) {
+	@return mix(#000, $purple, $percent);
+}
+
+// AZULES
+
+$darkblue: darkblue(20%);
+$mediumblue: lightblue(20%);
+$lightblue: lightblue(40%);
+
+
+// NARANJAS
+
+$darkorange: darkorange(20%);
+$mediumorange: lightorange(20%);
+$lightorange: lightorange(40%);
+
+
+// MORADOS
+
+$darkpurple: darkpurple(20%);
+$mediumpurple: lightpurple(20%);
+$lightpurple: lightpurple(40%);
+
+
+// ROJOS
+
+$darkred: darkred(20%);
+$mediumred: lightred(20%);
+$lightred: lightred(40%);
+
+
+// VERDES
+
+$darkgreen: darkgreen(20%);
+$mediumgreen: lightgreen(20%);
+$lightgreen: lightgreen(40%);
+
+
+
+
+
+// TEXT COLOR
+
+.-tc-blue { color: $blue };
+.-tc-darkgray { color: $darkgray };
+.-tc-mediumgray { color: $mediumgray };
+.-tc-lightgray { color: $lightgray };
+
+
+// SECUNDARIOS
+
+.tc-redwine { color: $redwine };
+.tc-red { color: $red };
+.tc-green { color: $green };
+.tc-orange { color: $orange };
+.tc-black { color: $black };
+.tc-lightgrayblue { color: $lightgrayblue };
+
+// AZULES
+
+.tc-darkblue { color: $darkblue };
+.tc-mediumblue { color: $mediumblue };
+.tc-lightblue { color: $lightblue };
+
+
+// NARANJAS
+
+.tc-darkorange { color: $darkorange };
+.tc-mediumorange { color: $mediumorange };
+.tc-lightorange { color: $lightorange };
+
+
+// ROJOS
+
+.tc-darkred { color: $darkred };
+.tc-mediumred { color: $mediumred };
+.tc-lightred { color: $lightred };
+
+
+// VERDES
+
+.tc-darkgreen { color: $darkgreen };
+.tc-mediumgreen { color: $mediumgreen };
+.tc-lightgreen { color: $lightgreen };
+
+
+// Clase especial para las pantallas con fondo blanco.
+// Se pasa por prametro al header.jsp
+
+.--bgcw {
+	background-color: #fff;
+}
+
+
+
+/*doc
+---
+title: Colores
+name: colores
+category: Base
+---
+
+Paleta de colores usados en la app.
+
+## Primarios
+Colores primarios.
+
+* $blue: #1c7fc3;
+* $darkgray: #393939;
+* $mediumgray: #ccc;
+* $lightgray: #f5f5f5;
+
+<div class="color-box blue">#1c7fc3</div>
+<div class="color-box darkgray">#393939</div>
+<div class="color-box mediumgray">#cccccc</div>
+<div class="color-box lightgray">#f5f5f5</div>
+
+## Secundarios
+Colores secundarios.
+<div class="row">
+	<div class="color-box orange">ORANGE</br>#ff8800</div>
+	<div class="color-box red">RED</br>#f44336</div>
+	<div class="color-box redwine">RED WINE</br>#a50606</div>
+	<div class="color-box green">GREEN</br>#669900</div>
+</div>
+<div class="row">
+	<div class="color-box black">BLACK</br>#222222</div>
+</div>
+
+## Azules
+<div class="row">
+	<div class="color-box darkblue">DARK BLUE</br>#16659c</div>
+	<div class="color-box blue">BLUE</br>#1c7fc3</div>
+	<div class="color-box mediumblue">MEDIUM BLUE</br>#4998cf</div>
+	<div class="color-box lightblue">LIGHT BLUE</br>#76b2db</div>
+</div>
+
+## Verdes
+<div class="row">
+	<div class="color-box darkgreen">DARK GREEN</br>#517a00</div>
+	<div class="color-box green">GREEN</br>#669900</div>
+	<div class="color-box mediumgreen">MEDIUM GREEN</br>#84ad33</div>
+	<div class="color-box lightgreen">LIGHT GREEN</br>#a3c166</div>
+</div>
+
+## Naranjas
+<div class="row">
+	<div class="color-box darkorange">DARK ORANGE</br>#cc6c00</div>
+	<div class="color-box orange">ORENGE</br>#ff8800</div>
+	<div class="color-box mediumorange">MEDIUM ORANGE</br>#ff9f33</div>
+	<div class="color-box lightorange">LIGHT ORANGE</br>#ffb766</div>
+</div>
+
+## Rojos
+<div class="row">
+	<div class="color-box darkred">DARK RED</br>#c3352b</div>
+	<div class="color-box red">RED</br>#f44336</div>
+	<div class="color-box mediumred">MEDIUM RED</br>#f6685e</div>
+	<div class="color-box lightred">LIGHT RED</br>#f88e86</div>
+</div>
+
+
+
+*/
+

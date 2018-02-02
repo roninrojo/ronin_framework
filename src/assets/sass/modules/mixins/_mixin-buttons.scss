@@ -1,0 +1,45 @@
+/*--------------------------------------------------------*\
+     BUTTONS
+\*--------------------------------------------------------*/
+
+/**
+ * Mixin para generar botones.
+ */
+
+// %boton {
+// 	@include border-radius();
+// 	border: 1px solid;
+// 	cursor: pointer;
+// 	display: inline-block;
+// 	padding: .875em 1em;
+// 	text-decoration: none;
+// 	text-align: center;
+// }
+
+@mixin boton($bg-color: $blue, $font-color: #fff) {
+	border-radius: 3px;
+	border: 1px solid;
+	cursor: pointer;
+	display: inline-block;
+	padding: .875em 1em;
+	text-decoration: none;
+	text-align: center;
+	// @extend %boton;
+	background: $bg-color;
+	border-color: mix(#000, $bg-color, 20%);
+	color: $font-color;
+	transition-property: background, border-color, color;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+
+
+	&:hover {
+		background: mix(#fff, $bg-color, 20%);
+		border-color: $bg-color;
+		color: $font-color;
+	}
+
+	&:active { box-shadow: inset 0 1px 5px rgba(0, 0, 0, .25); }
+
+	@content;
+}

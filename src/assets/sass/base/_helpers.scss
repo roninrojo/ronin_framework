@@ -1,0 +1,74 @@
+/*--------------------------------------------------------*\
+	  HELPERS
+\*--------------------------------------------------------*/
+
+
+.h--cl {
+	*zoom: 1;
+}
+.h--cl:before,
+.h--cl:after {
+	display: table;
+	content: "";
+}
+
+.h--cl:after { clear: both; }
+
+.h--cb { clear: both; }
+
+.h--fl { float: left; }
+
+.h--fr { float: right; }
+
+.h--db { display: block; }
+
+.h--dn { display: none; }
+
+.h--dib { display: inline-block; }
+
+.h--mz { margin: 0; }
+
+.h--mza {
+	float: none;
+	margin: 0 auto;
+}
+
+.h--tc { text-align: center; }
+.h--tu { text-transform: uppercase;}
+.h--fwb { font-weight: 700; }
+.h--fwl { font-weight: 300; }
+
+.h--lk {
+	color: $blue;
+	text-decoration: underline;
+	&:hover {
+		color: $mediumblue;
+		cursor: pointer;
+	}
+}
+
+
+// COLORES
+
+.h--cbl { color: $blue; }
+.h--cdg { color: $darkgray; }
+.h--cmg { color: $mediumgray; }
+.h--clg { color: $lightgray; }
+.h--crw { color: $redwine; }
+.h--cr { color: $red; }
+.h--cg { color: $green; }
+.h--co { color: $orange; }
+.h--ck { color: $black; }
+.h--cdb { color: $darkblue; }
+.h--cmb { color: $mediumblue; }
+.h--clb { color: $lightblue; }
+.h--cdo { color: $darkorange; }
+.h--cmo { color: $mediumorange; }
+.h--clo { color: $lightorange; }
+.h--cdr { color: $darkred; }
+.h--cmr { color: $mediumred; }
+.h--clr { color: $lightred; }
+.h--cdgr { color: $darkgreen; }
+.h--cmgr { color: $mediumgreen; }
+.h--clgr { color: $lightgreen; }
+

@@ -1,0 +1,8 @@
+{
+	"url" :
+		{
+			"landing_name" : "nombre_landing/",
+			"base" : "http://promo-test.ssstatic.com/landing/es/",
+			"js" : "http://promo-test.ssstatic.com/landing/src/js/form-landing.js"
+		}
+}

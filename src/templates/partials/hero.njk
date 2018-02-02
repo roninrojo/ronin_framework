@@ -1,0 +1,57 @@
+{# hero.njk #}
+
+{# hero | text | option: content__inner--full #
+<div class="content">
+	<div class="content__inner content__inner--full">
+		<div class="hero">
+			<div class="hero-content hero-content--text">
+				<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{# hero | bg image + img + text #
+<div class="content">
+	<div class="content__inner">
+		<div class="hero">
+			<img src="http://ipsumimage.appspot.com/340x200,ff7700" class="hero-img">
+			<div class="hero-content hero-content--image-text">
+				<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{# hero | bg image + form + text #
+<div class="content">
+	<div class="content__inner">
+		<div class="hero hero--form">
+				{% include "partials/form.njk" %}
+				<div class="hero-content hero-content--form">
+					<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt.</h1>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+{# hero | img + form #}
+<div class="content">
+	<div class="content__inner">
+		<div class="content__row">
+			<div class="hero hero--form hero--nobg">
+			<div class="contnet__c-6">
+				<div class="hero-content hero-content--image-form{# hero-content--bg #}">
+					<img width="500" src="{{url.base}}{{url.landing_name}}{{img.hero}}" alt="{{claim}}">
+				</div>
+			</div>
+			<div class="contnet__c-6">
+				{% include "partials/form.njk" %}
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

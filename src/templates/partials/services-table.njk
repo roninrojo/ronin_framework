@@ -1,0 +1,329 @@
+{# services-table.njk #}
+
+{#
+		<table id="packsTable">
+			<thead>
+				<tr>
+					<td class="first-col title col18">Servicio</td>
+					<td class="col9"><div class="title bronze"><span class="medal"></span>Pack Bronce</div></td>
+					<td class="col2"></td>
+					<td class="col9"><div class="title plate"><span class="medal"></span>Pack Plata</div></td>
+					<td class="col2"></td>
+					<td class="col9"><div class="title gold"><span class="medal"></span>Pack Oro</div></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="service w1 w2">
+					<td colspan="7">Mi web SoloStocks</td>
+				</tr>
+				<tr class="w0 w1 w2">
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/miWeb.ssi" data-unsp-sanitized="clean">Mi web SoloStocks</a></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service w1 w2">
+					<td colspan="7">Propuestas en "Necesito"</td>
+				</tr>
+				<tr id="corte" class="w0 w1 w2">
+					<td class="first-col"><span class="fake">Propuestas en "Necesito"</span></td>
+					<td><div class="btline">1 propuesta / mes</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">3 propuestas / mes</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">10 propuestas / mes</div></td>
+				</tr>
+				<tr class="service w1 w2">
+					<td colspan="7">Dirección web visible</td>
+				</tr>
+				<tr id="corte" class="w0 w1 w2">
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/webVisible.ssi" data-unsp-sanitized="clean">Dirección web visible</a></td>
+					<td><div class="btline"><span class="ico ko"></span><sup>*</sup></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Subir de posición en listados</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/promocionProductos.ssi" data-unsp-sanitized="clean">Subir de posición en listados</a></td>
+					<td><div class="btline">6</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">12</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">30</div></td>
+				</tr>
+				<tr class="service w1 w2">
+					<td colspan="7">Resultado de búsqueda patrocinado</td>
+				</tr>
+				<tr class="w0 w1 w2">
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/resultadoPatrocinado.ssi" data-unsp-sanitized="clean">Resultado de búsqueda patrocinado</a></td>
+					<td><div class="btline"><span class="ico ko"></span><sup>*</sup></div></td>
+					<td class="col2"></td>
+					<td><div class="btline">1 producto</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">3 productos</div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Sin competencia en fichas</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/prioridadProductos.ssi" data-unsp-sanitized="clean">Sin competencia en fichas</a></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Contactos por teléfono</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/hablaGratis.ssi" data-unsp-sanitized="clean">Contactos por teléfono</a></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Ofertas Destacadas</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/ofertaDestacada.ssi" data-unsp-sanitized="clean">Ofertas Destacadas</a></td>
+					<td><div class="btline"><span class="ico ko"></span><sup>*</sup></div></td>
+					<td class="col2"></td>
+					<td><div class="btline">1</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">5</div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Asistencia en ventas</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/asistenciaVentas.ssi" data-unsp-sanitized="clean">Asistencia en ventas</a></td>
+					<td><div class="btline">e-mail</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">e-mail</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">telefónica</div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Sincronización anual</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/sincronizacionAnual.ssi" data-unsp-sanitized="clean">Sincronización anual</a></td>
+					<td><div class="btline"><span class="ico ko"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ko"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Visibilidad internacional</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/visibilidadInternacional.ssi" data-unsp-sanitized="clean">Visibilidad internacional</a></td>
+					<td><div class="btline"><span class="ico ko"></span></div></td>
+					<td class="col2"></td>
+					<td>
+						<div class="btline">
+							2 países
+						</div>
+					</td>
+					<td class="col2"></td>
+					<td><div class="btline">4 países</div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Multicuenta</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/multicuenta.ssi" data-unsp-sanitized="clean">Multicuenta</a></td>
+					<td><div class="btline"><span class="ico ko"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ko"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Publicidad banners</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/publicidadBanners.ssi" data-unsp-sanitized="clean">Publicidad banners</a></td>
+					<td><div class="btline"><span class="ico ko"></span><sup>*</sup></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ko"></span><sup>*</sup></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service w1 w2">
+					<td colspan="7">Poner un producto En Promoción</td>
+				</tr>
+				<tr class="w0 w1 w2">
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/promocionPrecioProductos.ssi" data-unsp-sanitized="clean">Poner un producto En Promoción</a></td>
+					<td><div class="btline">1 producto</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">3 productos</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">5 productos</div></td>
+				</tr>
+				<tr class="service">
+					<td colspan="7">Publicación de grandes lotes</td>
+				</tr>
+				<tr>
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/lotes.ssi" data-unsp-sanitized="clean">Publicación de grandes lotes</a></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+					<td class="col2"></td>
+					<td><div class="btline"><span class="ico ok"></span></div></td>
+				</tr>
+				<tr class="service w1 w2">
+					<td colspan="7">Limitación de productos</td>
+				</tr>
+				<tr class="w0 w1 w2">
+					<td class="first-col"><a class="popup" href="http://www.solostocks.com/popups/premium/limitacionProductos.ssi" data-unsp-sanitized="clean">Limitación de productos</a> </td>
+					<td><div class="btline">500</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">2.000</div></td>
+					<td class="col2"></td>
+					<td><div class="btline">ilimitados</div></td>
+				</tr>
+			</tbody>
+		</table>
+#}
+<div class="content">
+	<div class="content__inner">
+		<div class="content__row">
+			<div class="content__c-12">
+				<div class="table-wrap js-table-wrap table-wrap--hide">
+					<table class="premium-table">
+						<thead>
+							<tr>
+								<td></td>
+								<td>nuevas empresas <br>  y emprendedores</td>
+								<td><strong>pymes y grandes <br> empresas</strong></td>
+								<td>empresas con  <br> un amplio catálogo</td>
+							</tr>
+						</thead>
+
+						<tr>
+							<td class="premium-table__service">Peticiones de presupuesto máximas mensuales</td>
+							<td>Ilimitadas</td>
+							<td>Ilimitadas</td>
+							<td>Ilimitadas</td>
+						</tr>
+
+						<tr>
+							<td class="premium-table__service">Mi web SoloStocks</td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+
+						<tr>
+							<td class="premium-table__service">Propuestas en "Necesito"</td>
+							<td>1 propuesta / mes</td>
+							<td>3 propuestas / mes</td>
+							<td>10 propuestas / mes</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Dirección web visible</td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Subir de posición en listados</td>
+							<td>6</td>
+							<td>12</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Resultado de búsqueda patrocinado</td>
+							<td><i class="icon-clear"></i></td>
+							<td>1 producto</td>
+							<td>3 producto</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Sin competencia en fichas</td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Contactos por teléfono</td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Ofertas Destacadas</td>
+							<td><i class="icon-clear"></i></td>
+							<td>1</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Asistencia en ventas</td>
+							<td>e-mail</td>
+							<td>e-mail</td>
+							<td>telefónica</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Sincronización anual</td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Visibilidad internacional</td>
+							<td><i class="icon-clear"></i></td>
+							<td>2 países</td>
+							<td>4 países</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Multicuenta</td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Publicidad banners</td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-clear"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Poner un producto En Promoción</td>
+							<td>1 producto</td>
+							<td>3 producto</td>
+							<td>5 producto</td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Publicación de grandes lotes</td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+							<td><i class="icon-check"></i></td>
+						</tr>
+						<tr>
+							<td class="premium-table__service">Limitación de productos</td>
+							<td>500</td>
+							<td>2000</td>
+							<td>ilomitados</td>
+						</tr>
+
+					</table>
+				</div>
+				<div class="content-row">
+					<div class="content-c-12 h--tc">
+						<span class="boton js-table-toggle h--tu h--fwl">mostrar mas</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

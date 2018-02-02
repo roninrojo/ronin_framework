@@ -1,0 +1,136 @@
+/*--------------------------------------------------------*\
+      TYPOGRAPHY
+\*--------------------------------------------------------*/
+
+/**
+* Configuración tipografía
+**/
+
+
+
+
+/*------------------------------------*\
+		GENERALS
+\*------------------------------------*/
+
+
+
+
+body {
+	font-family: $ff-deafult;
+	font-size: ($fs-default / 16) + em; // lo que seria 14px en base a 16px
+	line-height: 1.571429;
+	color: $black;
+}
+
+// Generate font size styles
+@each $size, $sizes in $text-sizing {
+	h1.#{$size},
+	h2.#{$size},
+	h3.#{$size},
+	h4.#{$size},
+	h5.#{$size},
+	h6.#{$size},
+	span.#{$size},
+	strong.#{$size},
+	p.#{$size},
+	label.#{$size},
+	input.#{$size},
+	i.#{$size},
+	ul.#{$size},
+	li.#{$size},
+	textarea.#{$size} {
+		@include font-size($size);
+	}
+}
+
+// Standard sizes
+
+// Headings
+h1 { @include font-size(xxlarge); }
+h2 { @include font-size(xxlarge); }
+h3 { @include font-size(large); }
+h4 { @include font-size(medium); }
+h5 { @include font-size(small); }
+h6 { @include font-size(xsmall); }
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// color: $title-color;
+	margin: 0;
+}
+
+// Titulos
+
+[class^="title"] {
+	display: inline-block;
+	margin: $xlarge-space 0;
+	width: 100%;
+
+	&.--up {
+		text-transform: uppercase;
+	}
+
+	&.--bd {
+		border-bottom: 1px solid $mediumgray;
+	}
+
+	&.--sub {
+		@include font-size(medium);
+	}
+
+	&.--light {
+		font-weight: 300;
+	}
+
+	+ ul {
+		margin-top: 0;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+a,
+a:hover,
+a:active {
+	color: $blue;
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+p + p {
+	margin-top: $large-space;
+}
+
+strong {
+	font-weight: 700;
+}
+
+// HELPERS
+
+
+// Esto no se si mola mucho, yo haría un modificador rollo .button--uppercase
+// button,
+// .button {
+// 	text-transform: uppercase;
+// }
+
+
+
+
+
+
+
+
+
+

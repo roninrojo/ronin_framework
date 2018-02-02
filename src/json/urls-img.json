@@ -1,0 +1,10 @@
+{
+	"img" :
+	{
+		"logo" : "assets/img/logo-header.svg",
+		"logo_landing" : "assets/img/logo_trest.jpg",
+		"hero" : "assets/img/banner.jpg",
+		"icon_sync" : "assets/img/syncro.svg",
+		"testimonial1" : "assets/img/testimonial1.png"
+	}
+}

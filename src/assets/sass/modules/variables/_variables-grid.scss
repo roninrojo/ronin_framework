@@ -1,0 +1,53 @@
+/*--------------------------------------------------------*\
+     GRID (Variables)
+\*--------------------------------------------------------*/
+
+/**
+ * Variables del grid
+ */
+
+// Valores estandards para margins y paddings
+
+// Basandonos en que el body tiene 16px de font-size.
+// $xxxsmall-space	=	1px;
+// $xxsmall-space	=	2px;
+// $xsmall-space	=	5px;
+// $small-space		=	8px;
+// $medium-space	=	10px;
+// $large-space		=	15px;
+// $xlarge-space	=	20px;
+// $xxlarge-space	=	25px;
+// $xxxlarge-space	=	40px;
+
+$xxxsmall-space: .0625rem;
+$xxsmall-space: .125rem;
+$xsmall-space: .3125rem;
+$small-space: .5rem;
+$medium-space: .625rem;
+$large-space: .9375rem;
+$xlarge-space: 1.25rem;
+$xxlarge-space: 1.563rem;
+$xxxlarge-space: 2.5rem;
+
+
+// Valores generales GRID
+$grid-width: 100%;
+$grid-columns: 12;
+$grid-gutter: $medium-space;
+
+// $body-padding: 10px;
+$body-padding: $medium-space;
+
+// Border Radius
+$form-border-radius: 3px;
+
+// Z-index
+
+$tierra: 0;
+$troposfera: 10;
+$estratosfera: 50;
+$mesosfera: 100;
+$termosfera: 1000;
+$gokulevel: 9001;
+$exosfera: 10000;
+

@@ -1,0 +1,10 @@
+{
+	"landing" : {
+		"title" : "nombre_landing"
+	},
+
+	"emailto" : {
+		"mkt" : "marketing@solostocks.com",
+		"test" : "producto@solostocks.com"
+	}
+}

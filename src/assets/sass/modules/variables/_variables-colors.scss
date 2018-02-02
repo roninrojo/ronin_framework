@@ -1,0 +1,118 @@
+/*--------------------------------------------------------*\
+     COLORS
+\*--------------------------------------------------------*/
+
+
+
+
+
+// PRIMARIOS
+
+$blue: #1c7fc3;
+$darkgray: #393939;
+$mediumgray: #ccc;
+$lightgray: #f5f5f5;
+
+
+// SECUNDARIOS
+
+$redwine: #a50606;
+$red: #d73c1e;
+$green: #690;
+$orange: #f80;
+$purple: #9C157B;
+$black: #222;
+$lightgrayblue: #f8f8fb;
+
+
+// TIPOGRAFIA
+
+$title-color: #333;
+$font-color: #555;
+
+
+@function lightblue($percent: 0) {
+	@return mix(#fff, $blue, $percent);
+}
+
+@function darkblue($percent: 0) {
+	@return mix(#000, $blue, $percent);
+}
+
+@function lightredwine($percent: 0) {
+	@return mix(#fff, $redwine, $percent);
+}
+
+@function darkredwine($percent: 0) {
+	@return mix(#000, $redwine, $percent);
+}
+
+@function lightred($percent: 0) {
+	@return mix(#fff, $red, $percent);
+}
+
+@function darkred($percent: 0) {
+	@return mix(#000, $red, $percent);
+}
+
+@function lightgreen($percent: 0) {
+	@return mix(#fff, $green, $percent);
+}
+
+@function darkgreen($percent: 0) {
+	@return mix(#000, $green, $percent);
+}
+
+@function lightorange($percent: 0) {
+	@return mix(#fff, $orange, $percent);
+}
+@function darkorange($percent: 0) {
+	@return mix(#000, $orange, $percent);
+}
+
+@function lightpurple($percent: 0) {
+	@return mix(#fff, $purple, $percent);
+}
+@function darkpurple($percent: 0) {
+	@return mix(#000, $purple, $percent);
+}
+
+// AZULES
+
+$darkblue: darkblue(20%);
+$mediumblue: lightblue(20%);
+$lightblue: lightblue(40%);
+
+
+// NARANJAS
+
+$darkorange: darkorange(20%);
+$mediumorange: lightorange(20%);
+$lightorange: lightorange(40%);
+
+
+// MORADOS
+
+$darkpurple: darkpurple(20%);
+$mediumpurple: lightpurple(20%);
+$lightpurple: lightpurple(40%);
+
+
+// ROJOS
+
+$darkred: darkred(20%);
+$mediumred: lightred(20%);
+$lightred: lightred(40%);
+
+// ROJOS
+
+$darkredwine: darkredwine(20%);
+$mediumredwine: lightredwine(20%);
+$lightredwine: lightredwine(40%);
+
+
+// VERDES
+
+$darkgreen: darkgreen(20%);
+$mediumgreen: lightgreen(20%);
+$lightgreen: lightgreen(40%);
