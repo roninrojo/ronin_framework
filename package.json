@@ -8,12 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/framework-landings-solostocks"
+    "url": "https://github.com/roninrojo/ronin_framework.git"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "bower": "^1.7.9",
     "browser-sync": "^2.15.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -25,18 +24,14 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.3",
     "gulp-json-sass": "0.0.2",
-    "gulp-jsoncombine": "^1.0.3",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-prompt": "^0.2.0",
     "gulp-purgecss": "^0.19.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "merge-stream": "^1.0.1",
-    "run-sequence": "^1.2.2",
-    "streamqueue": "^1.1.1",
-    "vinyl-paths": "^2.1.0"
+    "run-sequence": "^1.2.2"
   }
 }

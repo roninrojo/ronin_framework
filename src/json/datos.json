@@ -4,7 +4,6 @@
 	},
 
 	"emailto" : {
-		"mkt" : "marketing@solostocks.com",
-		"test" : "producto@solostocks.com"
+		"info" : "info@landing.com"
 	}
 }

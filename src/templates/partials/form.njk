@@ -18,10 +18,10 @@
 		<input id="text" class="form-field__value" type="text">
 		<span class="form-field__label">E-mail:</span>
 	</label>
-	<span class="form-info form-info--mini form-info--bg">No usaremos tu email para enviar publicidad de terceros</span>
+
 
 	{# Input radio #}
-	{#
+
 	<label class="form-field form-field--radio" for="radio1">
 		<input id="radio1" name="radio" class="form-field__value" type="radio">
 		<span class="form-field__label">Lorem</span>
@@ -30,10 +30,10 @@
 		<input id="radio2" name="radio" class="form-field__value" type="radio">
 		<span class="form-field__label">Lorem</span>
 	</label>
-	#}
+
 
 	{# Select #}
-	{#
+
 	<label class="form-field form-field--select" for="">
 		<span class="form-field__label">Lorem:</span>
 		<select class="form-field__value" name="" id="">
@@ -43,20 +43,16 @@
 			<option value="">option 4</option>
 			<option value="">option 5</option>
 		</select>
-	</label> #}
-
-	{# Textarea #}
-	{# <label class="form-field form-field--textarea" for="">
-		<span class="form-field__label">Lorem:</span>
-		<textarea class="form-field__value" name="" id="" cols="30" rows="10"></textarea>
-	</label> #}
-
-	<label class="form-field form-field--checkbox" for="check">
-		<input id="check" class="form-field__value" type="checkbox">
-		<span class="form-field__label">Llamadme ahora</span>
 	</label>
 
+	{# Textarea #}
+	 <label class="form-field form-field--textarea" for="">
+		<span class="form-field__label">Lorem:</span>
+		<textarea class="form-field__value" name="" id="" cols="30" rows="10"></textarea>
+	</label>
+
+
 	{# submit #}
-	<input type="submit" class="send-form-js boton boton--blue boton--uppercase boton--fw" value="{{form_button}}" data-type="1A">
+	<input type="submit" class="send-form-js boton boton--blue boton--uppercase boton--fw" value="{{form_button}}">
 </form>
 </div>
