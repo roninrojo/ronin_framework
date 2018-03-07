@@ -1,10 +1,6 @@
 {
 	"img" : {
-		"logo" : "\"img/logo-header.svg\"",
-		"logo_landing" : "\"img/logo_trest.jpg\"",
-		"hero" : "\"img/hero_bg.jpg\"",
-		"icon_sync" : "\"img/syncro.svg\"",
-		"testimonial1" : "\"img/testimonial1.png\"",
-		"background" : "\"img/background.jpg\""
+		"logo" : "\"\"",
+		"test" : "\"test.png\""
 	}
 }

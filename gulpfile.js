@@ -62,6 +62,8 @@ var idiomas = {
 	en : "./src/json/lang_en.json"
 }
 
+var entorno = 'dev';
+
 
  /**
  * Paths
@@ -81,21 +83,26 @@ var src = {
 	sass : "./src/assets/sass/**/*.scss",
 	fonts : "./src/assets/fonts/*",
 
+	// Datos generales
+	json_data : "./src/json/datos.json",
+
 	// Rutas imagenes para inyección en .njk
 	json_img : "./src/json/urls-img.json",
 
 	// Rutas absolutas para inyección en .njk
-	json_urls_dev : "./src/json/urls-dev.json",
-	json_urls_test : "./src/json/urls-test.json",
-	json_urls_prod : "./src/json/urls-prod.json",
+	json_urls : {
+		dev : "./src/json/urls-dev.json",
+		prod : "./src/json/urls-prod.json",
+	}
 
 	// Rutas de Imagenes para css
 	css_img_urls : "./src/json/url-img-css.json",
 
 	// Rutas absolutas para css
-	css_urls_dev : "./src/json/url-css-dev.json",
-	css_urls_test : "./src/json/url-css-test.json",
-	css_urls_prod : "./src/json/url-css-prod.json"
+	css_urls: {
+		dev : "./src/json/url-css-dev.json",
+		prod : "./src/json/url-css-prod.json"
+	}
 };
 
 // Ruta de destino, se crea dinámicamente en la task 'nombre_landing'
@@ -148,12 +155,16 @@ gulp.task('sass:dev', ['sass-json-vars:dev'], function(){
 
 
 // Procesamos Nunjucks
-gulp.task('njk:dev', function() {
+gulp.task('njk', function() {
 	// Gets .html and .nunjucks files in pages
 	return gulp.src(src.pages)
 	// Cargando las urls dev
 	.pipe(data(function() {
-		return require(src.json_urls_dev)
+		return require(src.json_urls[entorno])
+	}))
+	// Cargando datos
+	.pipe(data(function() {
+		return require(src.json_data)
 	}))
 	// Cargando las urls imagenes dev
 	.pipe(data(function() {
@@ -168,7 +179,7 @@ gulp.task('njk:dev', function() {
 		path: ['src/templates/','src/templates/partials', 'src/templates/include']
 	}))
 	// output files in app folder
-	.pipe(gulp.dest('./src'))
+	.pipe(gulp.dest(src.base))
 });
 
 gulp.task('watch', function() {
@@ -199,60 +210,6 @@ gulp.task('watch', function() {
 
 
 /*--------------------------------------------------------*\
-	 TEST TASKS
-\*--------------------------------------------------------*/
-
-/**
- * Tasks pensadas para optimizar y procesar el build final
- */
-
- // Procesamos Nunjucks
-gulp.task('njk:test', function() {
-	// Gets .html and .nunjucks files in pages
-	return gulp.src(src.pages)
-	// Cargando las urls dev
-	.pipe(data(function() {
-		return require(src.json_urls_test)
-	}))
-	// Cargando las urls imagenes dev
-	.pipe(data(function() {
-		return require(src.json_img)
-	}))
-	// Cargamos el idioma elegido
-	.pipe(data(function() {
-		return require(idiomas[idioma])
-	}))
-
-	// Renders template with nunjucks
-	.pipe(nunjucksRender({
-		path: ['src/templates/','src/templates/partials', 'src/templates/include']
-	}))
-	// output files in app folder
-	.pipe(gulp.dest(src.base))
-});
-
-// Procesamos los datos del archivo JSON y la importamos como variables SASS
-gulp.task('sass-json-vars:test', function(){
-	return gulp.src([src.css_urls_test,src.css_img_urls,src.base_sass + '/modules/variables/_variables-paths.scss'])
-	.pipe(jsonSass({
-	  sass: false
-	}))
-	.pipe(concat('_variables-all-paths.scss'))
-	.pipe(gulp.dest(src.base_sass + '/modules/variables/'));
-});
-
-// Procesamos los estilos
-gulp.task('sass:test', ['sass-json-vars:test'], function(){
-	return gulp.src([src.sass])
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest(src.base_css))
-});
-
-
-
-
-
-/*--------------------------------------------------------*\
 	 PROD TASKS
 \*--------------------------------------------------------*/
 
@@ -260,31 +217,6 @@ gulp.task('sass:test', ['sass-json-vars:test'], function(){
  * Tasks pensadas para optimizar y procesar el build final
  */
 
- // Procesamos Nunjucks
-gulp.task('njk:prod', function() {
-	// Gets .html and .nunjucks files in pages
-	return gulp.src(src.pages)
-	// Cargando las urls dev
-	.pipe(data(function() {
-		return require(src.json_urls_prod)
-	}))
-	// Cargando las urls imagenes dev
-	.pipe(data(function() {
-		return require(src.json_img)
-	}))
-	// Cargamos el idioma elegido
-	.pipe(data(function() {
-		return require(idiomas[idioma])
-	}))
-
-
-	// Renders template with nunjucks
-	.pipe(nunjucksRender({
-		path: ['src/templates/','src/templates/partials', 'src/templates/include', '!src/pages/test.njk', '!src/pages/example.njk']
-	}))
-	// output files in app folder
-	.pipe(gulp.dest(src.base))
-});
 
 // Procesamos los datos del archivo JSON y la importamos como variables SASS
 gulp.task('sass-json-vars:prod', function(){
@@ -327,7 +259,7 @@ gulp.task('sass:prod', ['sass-json-vars:prod'], function(){
 
 
 /*--------------------------------------------------------*\
-	 IDIOMAA
+	 IDIOMA
 \*--------------------------------------------------------*/
 
 /**
@@ -353,6 +285,53 @@ gulp.task('idioma', function() {
 	}));
 });
 
+
+
+
+/*--------------------------------------------------------*\
+	 ENTORNO
+\*--------------------------------------------------------*/
+
+/**
+ * Selección del entorno mediante checkbox en un prompt del terminal
+ * Seleccionamos el entorno mediante notación de corchetes
+ */
+
+
+// Selector de entorno
+gulp.task('entorno', function() {
+
+	var entornos = ['dev','prod'];
+
+	return gulp.src('./gulpfile.js')
+		.pipe(prompt.prompt({
+		type: 'checkbox',
+		name: 'entorno',
+		message: '¿Qué entorno usamos para el build?',
+		choices: entornos
+	}, function(res){
+		entorno = res.etorno;
+		gutil.log('Entorno elegido: ' + gutil.colors.green(entorno));
+	}));
+});
+
+// Selector de build
+gulp.task('build', function() {
+
+	var builds = ['build:dev','build:prod'];
+
+	return gulp.src('./gulpfile.js')
+		.pipe(prompt.prompt({
+		type: 'checkbox',
+		name: 'build',
+		message: '¿Qué build usamos?',
+		choices: build
+	}, function(res){
+		build = res.build;
+		gutil.log('Build elegido: ' + gutil.colors.green(build));
+		gulp.start(build);
+	}));
+});
 
 // testeo
 // gulp.task('nombre', function() {
@@ -384,7 +363,7 @@ gulp.task('clean:dist', function() {
 			.pipe(gulp.dest(dist.js)),
 		gulp.src([src.fonts, '!./src/assets/fonts/selection.json'])
 			.pipe(gulp.dest(dist.fonts)),
-		gulp.src([src.html,'!./src/index.html','!./src/test.html','!./src/example.html',,'!./src/readme.html'])
+		gulp.src([src.html])
 			.pipe(gulp.dest(dist.base)),
 		gulp.src(src.img)
 			.pipe(gulp.dest(dist.img))
@@ -454,22 +433,11 @@ gulp.task('fonts', function() {
 gulp.task('build:dev', function () {
 	runSequence(
 				'idioma',
+				'entorno'
 				'clean:dist',
 				'sass:dev',
-				'njk:dev',
+				'njk',
 				'move_assets'
-	)
-});
-
-// Landing Test
-gulp.task('build:test', function () {
-	runSequence(
-				'idioma',
-				'sass:test',
-				'njk:test',
-				'clean:dist',
-				'move_assets',
-				'purgecss'
 	)
 });
 
@@ -477,8 +445,9 @@ gulp.task('build:test', function () {
 gulp.task('build:prod', function () {
 	runSequence(
 				'idioma',
+				'entorno',
 				'sass:prod',
-				'njk:prod',
+				'njk',
 				'clean:dist',
 				'move_assets',
 				[

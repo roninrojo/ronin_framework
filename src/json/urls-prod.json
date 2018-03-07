@@ -4,7 +4,6 @@
 
 	"url" :
 		{
-			"base" : "./",
-			"landing_name" : ""
+			"base" : "."
 		}
 }

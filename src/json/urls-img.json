@@ -1,8 +1,7 @@
 {
 	"img" :
 	{
-		"logo" : "assets/img/logo-header.svg",
-		"hero" : "assets/img/banner.jpg",
-		"testimonial1" : "assets/img/testimonial1.png"
+		"logo" : "",
+		"test" : "assets/img/test.png"
 	}
 }

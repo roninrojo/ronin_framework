@@ -1,6 +1,8 @@
 {
-	"landing" : {
-		"title" : "nombre_landing"
+	"site" : {
+		"title" : "Nombre",
+		"version" : "1.0",
+		"url" : ""
 	},
 
 	"emailto" : {
