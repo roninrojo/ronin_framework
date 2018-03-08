@@ -1,4 +1,18 @@
-<!-- blank.nunjuks -->
+{# blank.nunjuks #}
+
+{# TEST #}
+
+{% if (site.entorno == "dev" or site.entorno == "test") and testing == "true" %}
+
+<div class="info-dev">
+    <p>Title: {{ site.name }}</p>
+    <p>Entorno: {{ entorno }}</p>
+    <p>version: {{ site.version }}</p>
+</div>
+
+{% endif %}
+{##}
+
 <!DOCTYPE html>
 <html lang="en">
 	{% include "includes/head.njk" %}

@@ -23,6 +23,7 @@
     "gulp-data": "^1.2.1",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-json-injector": "0.0.4",
     "gulp-json-sass": "0.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-nunjucks-render": "^2.0.0",

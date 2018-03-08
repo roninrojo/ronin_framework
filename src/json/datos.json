@@ -2,7 +2,9 @@
 	"site" : {
 		"title" : "Nombre",
 		"version" : "1.0",
-		"url" : ""
+		"url" : "",
+		"entorno" : "",
+		"data" : "false"
 	},
 
 	"emailto" : {

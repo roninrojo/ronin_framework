@@ -11,7 +11,7 @@
 
 .hero {
 	align-items: stretch;
-	background: url(#{$url_assets}#{$img-hero});
+	background: url(#{$url}#{$img-test});
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -64,7 +64,7 @@
 		// MODIFICADORES
 
 		&--bg {
-			background: url($img-hero);
+			background: url($img-test);
 			background-position: center;
 			background-size: cover;
 			border: 10px solid #fff;

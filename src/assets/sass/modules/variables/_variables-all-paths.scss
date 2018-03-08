@@ -1,11 +1,7 @@
-$url: "../";
-$url_assets: "../assets/";
-$img-logo: "img/logo-header.svg";
-$img-logo_landing: "img/logo_trest.jpg";
-$img-hero: "img/hero_bg.jpg";
-$img-icon_sync: "img/syncro.svg";
-$img-testimonial1: "img/testimonial1.png";
-$img-background: "img/background.jpg";
-$path-img: "#{$url_assets}img/";
-$icomoon-font-path: "#{$url_assets}fonts/";
+$entorno: dev;
+$url: "";
+$img-logo: "";
+$img-test: "test.png";
+$path-img: "#{$url}img/";
+$icomoon-font-path: "#{$url}fonts/";
 $iconfont-name: "iconfont";

@@ -1,5 +1,16 @@
-// media queries
 
+.info-dev {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: .7em;
+	z-index: 1000;
+	outline: 1px solid tomato;
+	padding: 1em;
+	p {margin: 0;}
+}
+
+// media queries
 html {
 	@include media (b1) {
 		outline: 2px solid red;

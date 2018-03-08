@@ -36,7 +36,6 @@ var uglify = require('gulp-uglify');
 var nunjucksRender = require('gulp-nunjucks-render');
 
 // Manipulación de datos
-// var rename = require('gulp-rename');
 var data = require('gulp-data');
 var jsonSass = require('gulp-json-sass');
 // var jsoncombine = require("gulp-jsoncombine");
@@ -60,7 +59,7 @@ var idiomas = {
 	es : "./src/json/lang_es.json",
 	cat : "./src/json/lang_cat.json",
 	en : "./src/json/lang_en.json"
-}
+	};
 
 var entorno = 'dev';
 
@@ -93,7 +92,7 @@ var src = {
 	json_urls : {
 		dev : "./src/json/urls-dev.json",
 		prod : "./src/json/urls-prod.json",
-	}
+	},
 
 	// Rutas de Imagenes para css
 	css_img_urls : "./src/json/url-img-css.json",
@@ -113,7 +112,7 @@ var dist = {
 	js : "./dist/assets/js",
 	img : "./dist/assets/img",
 	fonts : "./dist/assets/fonts"
-}
+};
 
 
 /*--------------------------------------------------------*\
@@ -138,7 +137,7 @@ gulp.task('reload', function () {
 
 // Procesamos los datos del archivo JSON y la importamos como variables SASS
 gulp.task('sass-json-vars:dev', function(){
-	return gulp.src([src.css_urls_dev, src.css_img_urls, src.base_sass + '/modules/variables/_variables-paths.scss'])
+	return gulp.src([src.css_urls[entorno], src.css_img_urls, src.base_sass + '/modules/variables/_variables-paths.scss'])
 	.pipe(jsonSass({
 	  sass: false
 	}))
@@ -192,17 +191,17 @@ gulp.task('watch', function() {
 	});
 	// watch Pages
 	gulp.watch([src.pages], function(){
-		runSequence('njk:dev','reload')
+		runSequence('njk','reload')
 	});
 	// watch Templates
 	gulp.watch('./src/templates/**/*.njk', function(){
-		runSequence('njk:dev','reload')
+		runSequence('njk','reload')
 	});
 	// watch JS
 	gulp.watch(src.js, ['js','reload']);
 	// watch JSON
 	gulp.watch('src/json/*.json', function() {
-		runSequence(['sass-json-vars:dev','njk:dev'],'reload')
+		runSequence(['sass-json-vars:dev','njk'],'reload')
 	});
 });
 
@@ -220,7 +219,7 @@ gulp.task('watch', function() {
 
 // Procesamos los datos del archivo JSON y la importamos como variables SASS
 gulp.task('sass-json-vars:prod', function(){
-	return gulp.src([src.css_urls_prod,src.css_img_urls,src.base_sass + '/modules/variables/_variables-paths.scss'])
+	return gulp.src([src.css_urls[entorno],src.css_img_urls,src.base_sass + '/modules/variables/_variables-paths.scss'])
 	.pipe(jsonSass({
 	  sass: false
 	}))
@@ -338,6 +337,20 @@ gulp.task('build', function() {
 // 	gutil.log('Nombre de dist.base: ' + gutil.colors.green(dist.base) + '\n' + 'Nombre carpeta: ' + landing_name);
 // });
 
+// Inyectar datos en los.json
+
+// gulp.task('inject', function(){
+//   gulp.src('./src/json/name.json')
+// 	.pipe(jsonInjector({
+// 	  inject:function(json, next, file){
+// 		json.propertie = valor;
+// 		next(json);
+// 	  }
+// 	}))
+// 	.pipe(gulp.dest('./src/json'))
+
+// });
+
 
 
 /*--------------------------------------------------------*\
@@ -433,7 +446,7 @@ gulp.task('fonts', function() {
 gulp.task('build:dev', function () {
 	runSequence(
 				'idioma',
-				'entorno'
+				'entorno',
 				'clean:dist',
 				'sass:dev',
 				'njk',
@@ -469,7 +482,7 @@ gulp.task('default', function() {
 				'idioma',
 				[
 				'sass:dev',
-				'njk:dev'
+				'njk'
 				],
 				'browser-sync',
 				'watch'

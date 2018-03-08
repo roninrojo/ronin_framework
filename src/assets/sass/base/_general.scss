@@ -53,23 +53,6 @@ table {
 	width: 100%;
 }
 
-/* Hero */
-
-.hero {
-	min-height: 10em;
-	&:before {
-		background: none;
-	}
-
-	@include media (2) {
-		display: none;
-	}
-}
-
-
-body {
-	background: #fff;
-}
 
 pre {
 	width: 100%;

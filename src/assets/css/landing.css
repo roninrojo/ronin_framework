@@ -419,7 +419,7 @@ select {
  */
 .hero {
   align-items: stretch;
-  background: url(../assets/img/hero_bg.jpg);
+  background: url(test.png);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -454,7 +454,7 @@ select {
       line-height: 1.5;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6), 0 1px 1px rgba(0, 0, 0, 0.4); }
     .hero .hero-content--bg {
-      background: url("img/hero_bg.jpg");
+      background: url("test.png");
       background-position: center;
       background-size: cover;
       border: 10px solid #fff; }
@@ -1106,8 +1106,8 @@ Colores secundarios.
 \*--------------------------------------------------------*/
 @font-face {
   font-family: 'iconfont';
-  src: url("../assets/fonts/iconfont.eot");
-  src: url("../assets/fonts/iconfont.eot") format("embedded-opentype"), url("../assets/fonts/iconfont.ttf") format("truetype"), url("../assets/fonts/iconfont.woff") format("woff"), url("../assets/fonts/iconfont.svg") format("svg");
+  src: url("fonts/iconfont.eot");
+  src: url("fonts/iconfont.eot") format("embedded-opentype"), url("fonts/iconfont.ttf") format("truetype"), url("fonts/iconfont.woff") format("woff"), url("fonts/iconfont.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2126,18 +2126,6 @@ table {
   border-collapse: collapse;
   width: 100%; }
 
-/* Hero */
-.hero {
-  min-height: 10em; }
-  .hero:before {
-    background: none; }
-  @media (max-width: 767px) {
-    .hero {
-      display: none; } }
-
-body {
-  background: #fff; }
-
 pre {
   width: 100%;
   word-break: break-all;
@@ -2420,9 +2408,7 @@ pre {
 /*--------------------------------------------------------*     CUSTOM.SCSS
 \*--------------------------------------------------------*/
 /**
- * Estilos personalizados para esta landing
- y no mezclarlos con los generales del framework (general.scss,...)
- que se puedan ir actualizando
+ * Estilos personalizados
  */
 /*--------------------------------------------------------*     TEST
 \*--------------------------------------------------------*/
