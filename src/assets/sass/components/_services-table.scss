@@ -76,7 +76,7 @@
 		padding-right: $xlarge-space;
 	}
 
-	@include media (3) {
+	@include media ('<=tablet') {
 
 		.premium-table__service {
 			text-align: center;

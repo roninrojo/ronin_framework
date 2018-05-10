@@ -45,10 +45,6 @@
 		padding-left: $gutter;
 		margin: 0;
 		float: left;
-
-		// @include media(3) {
-		// 	float: none;
-		// }
 	}
 
 
@@ -74,7 +70,7 @@
 				padding-right: 0;
 			}
 
-			@include media(2) {
+			@include media('>phone', '<=tablet') {
 				width: 100%;
 
 				&:first-child {

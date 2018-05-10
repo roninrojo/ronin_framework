@@ -395,9 +395,13 @@ gulp.task('purgecss', () => {
 	.pipe(gulp.dest(dist.css));
 })
 
-// Minificar CSS
-gulp.task('minifyCSS', function() {
+// Procesar CSS
+gulp.task('proCSS', function() {
 	return gulp.src([src.css])
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(cssnano())
 		.pipe(gulp.dest(dist.css))
 });
@@ -465,7 +469,7 @@ gulp.task('build:prod', function () {
 				'move_assets',
 				[
 				'minifyHTML',
-				'minifyCSS',
+				'proCSS',
 				'images',
 				'js',
 				'fonts'

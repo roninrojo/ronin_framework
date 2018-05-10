@@ -12,7 +12,7 @@
 
 // media queries
 html {
-	@include media (b1) {
+	@include media ('<phone') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;
@@ -25,7 +25,7 @@ html {
 		}
 	}
 
-	@include media (b2) {
+	@include media ('>phone') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;
@@ -38,7 +38,7 @@ html {
 		}
 	}
 
-	@include media (b3) {
+	@include media ('<tablet') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;
@@ -51,7 +51,7 @@ html {
 		}
 	}
 
-	@include media (b4) {
+	@include media ('>tablet') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;
@@ -64,7 +64,7 @@ html {
 		}
 	}
 
-	@include media (b5) {
+	@include media ('<desktop') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;
@@ -77,7 +77,7 @@ html {
 		}
 	}
 
-	@include media (b6) {
+	@include media ('>desktop') {
 		outline: 2px solid red;
 		&:before {
 			position: absolute;

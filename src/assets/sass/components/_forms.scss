@@ -123,13 +123,6 @@ Select con estilo personalizado:
 				position: absolute;
 				top: $small-space;
 				text-align: right;
-
-				@include media (2) {
-					left: $medium-space;
-					top: $xxlarge-space * 1.1;
-					right: inherit;
-					text-align: left;
-				}
 			}
 		}
 	}
