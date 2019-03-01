@@ -175,7 +175,7 @@ gulp.task('njk', function() {
 	}))
 	// Renders template with nunjucks
 	.pipe(nunjucksRender({
-		path: ['src/templates/','src/templates/partials', 'src/templates/include']
+		path: ['src/templates/','src/templates/layouts','src/templates/partials', 'src/templates/include']
 	}))
 	// output files in app folder
 	.pipe(gulp.dest(src.base))
